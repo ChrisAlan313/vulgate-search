@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.describe Verse, type: :model do
   describe '#initialize' do
     context 'valid' do
-      line = 'Gen|1|1|In principio creavit Deus c&#230;lum et terram.'
-      subject(:verse) { Verse.new(line) }
+      subject(:verse) {
+        Verse.new('Gen|1|1|In principio creavit Deus c&#230;lum et terram.')
+      }
 
 
       it 'saves book abbreviation' do

@@ -5,10 +5,11 @@ class Verse < ApplicationRecord
   attr_reader :text
 
   def initialize(line)
-    parsed_line = line.split('|')
-    @book_abbreviation = parsed_line[0]
-    @chapter_number = parsed_line[1].to_i
-    @verse_number = parsed_line[2].to_i
-    @text = parsed_line[3]
+    verse_hash = BibleParser.parse_line(line)
+
+    @book_abbreviation = verse_hash[:book_abbreviation]
+    @chapter_number = verse_hash[:chapter_number]
+    @verse_number = verse_hash[:verse_number]
+    @text = verse_hash[:text]
   end
 end
