@@ -1,27 +1,32 @@
 require 'rails_helper'
 
 RSpec.describe Verse, type: :model do
-  describe '#initialize' do
+  describe '#new' do
     context 'valid' do
-      subject(:verse) {
-        Verse.new('Gen|1|1|In principio creavit Deus c&#230;lum et terram.')
-      }
+      before do
+        Verse.new({
+          book_abbreviation: 'Gen',
+          chapter_number: 1,
+          verse_number: 1,
+          text: 'In principio creavit Deus c&#230;lum et terram.'
+        }).save
+      end
 
 
       it 'saves book abbreviation' do
-        expect(verse.book_abbreviation).to eq('Gen')
+        expect(Verse.last.book_abbreviation).to eq('Gen')
       end
 
       it 'saves chapter number' do
-        expect(verse.chapter_number).to eq(1)
+        expect(Verse.last.chapter_number).to eq(1)
       end
 
       it 'saves verse number' do
-        expect(verse.verse_number).to eq(1)
+        expect(Verse.last.verse_number).to eq(1)
       end
 
       it 'saves text' do
-        expect(verse.text).to eq(
+        expect(Verse.last.text).to eq(
           'In principio creavit Deus c&#230;lum et terram.'
         )
       end
