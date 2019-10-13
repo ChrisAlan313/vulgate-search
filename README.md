@@ -4,9 +4,10 @@
 
 ## TODO
 
-- [ ] Work on way to import Vulgate Bible file into either Rails memory or the DB
-- [ ] Convert the character encoding to display diphthongs
+- [x] Work on way to import Vulgate Bible file into either Rails memory or the DB
+	- It's in the DB
 - [ ] Display individual verses
+- [ ] Convert the character encoding to display diphthongs
 - [ ] Display individual chapters
 - [ ] Display individual Books
 - [ ] Add way to search verses for matching words
