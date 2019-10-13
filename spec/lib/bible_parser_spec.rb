@@ -1,7 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe BibleParser do
-  describe '.parsed_line' do
+  describe '.run' do
+    context 'valid' do
+      subject(:parsed_bible) {
+        BibleParser.parse_bible
+      }
+
+
+      it 'has 35811 verses' do
+
+      end
+    end
+  end
+
+  describe '.parse_line' do
     context 'valid' do
       subject(:parsed_line) {
         BibleParser.parse_line(
@@ -10,7 +23,7 @@ RSpec.describe BibleParser do
       }
 
 
-      it 'returns book abbreviation' do
+      it 'saves book abbreviation' do
         expect(parsed_line[:book_abbreviation]).to eq('Ti1')
       end
 
