@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_25_022955) do
+ActiveRecord::Schema.define(version: 2019_10_14_022347) do
+
+  create_table "books", force: :cascade do |t|
+    t.string "abbreviation"
+    t.string "latin_title"
+    t.string "english_title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "verses", force: :cascade do |t|
     t.string "book_abbreviation"

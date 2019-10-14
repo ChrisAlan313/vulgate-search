@@ -7,9 +7,9 @@
 - [x] Work on way to import Vulgate Bible file into either Rails memory or the DB
 	- It's in the DB
 - [x] Display individual verses
-- [ ] Convert the character encoding to display diphthongs
+- [x] Display individual Books
 - [ ] Display individual chapters
-- [ ] Display individual Books
+- [ ] Convert the character encoding to display diphthongs
 - [ ] Add way to search verses for matching words
 - [ ] Find dump of the Douay-Rheims Bible
 - [ ] Extend whatever classes we're using for verses, chapters and books to include both translations

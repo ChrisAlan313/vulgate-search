@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'verses/index'
+  get '/verses/index'
   get '/verses/:id', to: 'verses#show'
-  get '/verses/:first/:last', to: 'verses#show_range'
+  get '/books', to: 'books#index'
+  get '/books/:abbreviation', to: 'books#show', as: 'book'
 end

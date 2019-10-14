@@ -1,0 +1,14 @@
+<h1>
+  <%= @title %>
+</h1>
+
+<%= "Total verses: #{@verses.count}" %>
+
+<div>
+  <% @verses.each do |verse| %>
+    <div>
+      <br>
+      <%= verse %>
+    </div>
+  <% end %>
+</div>
