@@ -6,7 +6,7 @@
 
 - [x] Work on way to import Vulgate Bible file into either Rails memory or the DB
 	- It's in the DB
-- [ ] Display individual verses
+- [x] Display individual verses
 - [ ] Convert the character encoding to display diphthongs
 - [ ] Display individual chapters
 - [ ] Display individual Books
