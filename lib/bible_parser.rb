@@ -1,8 +1,6 @@
 class BibleParser
-  VULGATE_BIBLE_FILE = Rails.root.join('lib', 'vuldat.txt')
-
   def self.run
-    parsed_lines = File.readlines(VULGATE_BIBLE_FILE).map do |line|
+    parsed_lines = File.readlines(Constants::VULGATE_BIBLE_FILE).map do |line|
       BibleParser.parse_line(line)
     end
 
