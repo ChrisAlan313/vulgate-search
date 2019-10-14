@@ -17,5 +17,9 @@ module VulgateSearch
     # the framework and any gems in your application.
 
     config.autoload_paths += Dir[Rails.root.join('lib')]
+
+    config.generators do |g|
+      g.test_framework :rspec
+    end
   end
 end
